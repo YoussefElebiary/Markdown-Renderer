@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name {
+    color: #2c3e50;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.mainCont {
+    display: flex;
+    width: calc(100% - 4rem);
+    height: 75vh;
+    margin: 0 auto;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.entryCont, #displayCont {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.entryCont:hover, .entryCont:has(#input:focus), #displayCont:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.toolBar {
+    height: 50px;
+    min-height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: #4a6fa5;
+    color: white;
+}
+
+.toolBar > div {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.toolBar p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.toolBar:has(p) {
+    height: 36px;
+}
+
+.fileBtnLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #5a86c1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.icon-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+#clearBtn {
+    background: #e74c3c;
+}
+
+#runBtn {
+    background: #2ecc71;
+}
+
+.fileBtnLabel:hover, .icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.fileBtnLabel:hover {
+    background: #4a7bbd;
+}
+
+#clearBtn:hover {
+    background: #c0392b;
+}
+
+#runBtn:hover {
+    background: #27ae60;
+}
+
+#input, #content {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: #f9f9f9;
+}
+
+#input::placeholder {
+    color: #a0aec0;
+    font-style: italic;
+    opacity: 1;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+#input:focus::placeholder {
+    color: #cbd5e0;
+}
+
+#content {
+    overflow-y: auto;
+    color: #333;
+    padding-top: 0rem;
+}
+
+#content > *:first-child {
+    margin-top: 0.75rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a0aec0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+#content:empty::before {
+    content: "Rendered Markdown will appear here";
+    color: #a0aec0;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.authorCredit {
+    text-align: center;
+    color: #4a6fa5;
+    font-size: 0.9em;
+    margin-top: 1.5rem;
+}
+
+.authorLink, .authorLink:visited {
+    color: #4a6fa5;
+    text-decoration: none;
+}
