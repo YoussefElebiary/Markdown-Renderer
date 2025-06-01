@@ -6,6 +6,7 @@
         <meta name="description" content="This is a mardown rendering tool made by Youssef Elebiary" />
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
         <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4dd.png" type="image/png">
         <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4dd.svg" type="image/svg+xml">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.1.1/marked.min.js"></script>
@@ -21,10 +22,10 @@
                     </label>
                     <input id="fileBtn" type="file" accept=".md, .markdown, .txt" text="File" onchange="loadFile(event);" hidden />
                     <div>
-                        <button id="clearBtn" class="icon-btn" title="Clear" style="background-color: red;" onclick="clearInput()">
+                        <button id="clearBtn" class="icon-btn" title="Clear" onclick="clearInput()">
                             <i class="fas fa-trash-alt" style="color: white;"></i>
                         </button>
-                        <button id="runBtn" class="icon-btn" title="Run" style="background-color: green;" onclick="render()">
+                        <button id="runBtn" class="icon-btn" title="Run" onclick="render()">
                             <i class="fas fa-play" style="color: white;"></i>
                         </button>
                     </div>
